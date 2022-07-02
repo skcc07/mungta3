@@ -1,10 +1,10 @@
-package com.demo.petstore.domain;
+package com.demo.user.domain;
 
 import javax.persistence.*;
 
 @Entity
-@DiscriminatorValue("cat")
-public class Cat extends Pet{
+@DiscriminatorValue("user")
+public class Customer extends User{
 
     @Override
     public String speak() {

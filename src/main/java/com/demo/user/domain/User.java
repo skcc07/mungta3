@@ -1,8 +1,8 @@
-package com.demo.petstore.domain;
+package com.demo.user.domain;
 
 import javax.persistence.*;
 
-import com.demo.petstore.PetstoreApplication;
+import com.demo.user.UserApplication;
 
 @Entity
 @DiscriminatorColumn(
@@ -10,7 +10,7 @@ import com.demo.petstore.PetstoreApplication;
     name = "pet_type",
     columnDefinition = "CHAR(5)"
 )
-public abstract class Pet {
+public abstract class User {
 
 	String name;
 		public String getName() {
@@ -54,8 +54,9 @@ public abstract class Pet {
 	}
 
 	public void save(){
-		Repository repository = PetstoreApplication.getApplicationContext().getBean(Repository.class);
+		UserRepository repository = UserApplication.getApplicationContext().getBean(UserRepository.class);
 		repository.save(this);
+		;
 	}
 
 

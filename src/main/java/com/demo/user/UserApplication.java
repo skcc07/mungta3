@@ -1,15 +1,15 @@
-package com.demo.petstore;
+package com.demo.user;
 
-import com.demo.petstore.domain.Dog;
-import com.demo.petstore.domain.Cat;
-import com.demo.petstore.domain.Pet;
+import com.demo.user.domain.Admin;
+import com.demo.user.domain.Customer;
+import com.demo.user.domain.User;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-public class PetstoreApplication {
+public class UserApplication {
 
 	static ApplicationContext applicationContext;
 	public static ApplicationContext getApplicationContext(){
@@ -17,10 +17,10 @@ public class PetstoreApplication {
 	}
 
 	public static void main(String[] args) {
-		applicationContext = SpringApplication.run(PetstoreApplication.class, args);
+		applicationContext = SpringApplication.run(UserApplication.class, args);
 
-		Pet dog = new Dog();   // new Cat();
-		dog.setName("뽀삐");
+		Customer dog = new Customer();   // new Admin();
+		dog.setName("김고객");
 
 		System.out.println(dog.speak());
 
